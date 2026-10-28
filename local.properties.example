@@ -1,0 +1,5 @@
+# 이 파일을 복사해 local.properties 로 이름을 바꾸고 본인 값으로 채우세요.
+# local.properties 는 .gitignore 에 포함되어 GitHub에 올라가지 않습니다.
+sdk.dir=C\:\\Users\\YOUR_NAME\\AppData\\Local\\Android\\Sdk
+SUPABASE_URL=https://YOUR_PROJECT_ID.supabase.co
+SUPABASE_KEY=YOUR_SUPABASE_PUBLISHABLE_KEY

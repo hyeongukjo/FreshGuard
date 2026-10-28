@@ -1,0 +1,21 @@
+# Gradle / Android Studio
+*.iml
+.gradle/
+.kotlin/
+/build/
+/app/build/
+/captures
+.externalNativeBuild
+.cxx
+.idea/
+
+# 로컬 설정 및 비밀키 (절대 업로드 금지)
+local.properties
+
+# 빌드 산출물 (APK는 GitHub Releases에 올립니다)
+*.apk
+*.aab
+
+# OS
+.DS_Store
+Thumbs.db

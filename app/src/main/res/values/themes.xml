@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.FreshGuard" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:fontFamily">@font/nanum_round</item>
+
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:windowLightStatusBar">true</item> </style>
+
+    <style name="Theme.FreshGuard" parent="Base.Theme.FreshGuard" />
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#FFFFFF</item> <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_icon</item>
+        <item name="postSplashScreenTheme">@style/Theme.FreshGuard</item>
+
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
