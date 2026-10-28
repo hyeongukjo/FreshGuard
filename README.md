@@ -19,7 +19,7 @@
 
 ---
 
-## 📌 프로젝트 개요
+## 프로젝트 개요
 
 | 항목 | 내용 |
 |---|---|
@@ -32,24 +32,24 @@
 알림을 줘도 **"그래서 이걸로 뭘 해 먹지?"** 에 대한 답이 없었습니다.
 FreshGuard는 **카메라 스캔으로 입력을 자동화**하고, 임박 재료를 **바로 레시피로 연결**합니다.
 
-## ✨ 주요 기능
+## 주요 기능
 
 | 기능 | 설명 |
 |---|---|
-| 📷 **실시간 유통기한 스캔** | CameraX 프리뷰 프레임을 ML Kit(한국어 텍스트 인식)로 분석, 정규식으로 날짜만 추출해 `YYYY.MM.DD`로 정규화 |
-| ✅ **인식 결과 확인 → 등록** | 인식 날짜 확인/수정 다이얼로그 → BottomSheet에서 이름·수량·보관 위치(냉장/냉동) 입력 |
-| 🧊 **냉장고 대시보드** | 유통기한 순 정렬 목록, 전체/냉장실/냉동실 탭, 전체·임박(3일 이하)·만료 개수 통계 |
-| ✏️ **수정 · 스와이프 삭제** | 카드 탭 → 수정 BottomSheet, 좌우 스와이프로 삭제 (Supabase 즉시 반영) |
-| 🔔 **백그라운드 임박 알림** | WorkManager `CoroutineWorker`가 주기적으로 DB를 확인해 3일 이하 재료가 있으면 푸시 알림 |
-| ▶️ **유튜브 레시피 연결** | 재료별 D-Day 칩(임박 재료는 빨간색) → 탭하면 "OO 레시피" 유튜브 검색으로 이동 |
+|  **실시간 유통기한 스캔** | CameraX 프리뷰 프레임을 ML Kit(한국어 텍스트 인식)로 분석, 정규식으로 날짜만 추출해 `YYYY.MM.DD`로 정규화 |
+|  **인식 결과 확인 → 등록** | 인식 날짜 확인/수정 다이얼로그 → BottomSheet에서 이름·수량·보관 위치(냉장/냉동) 입력 |
+|  **냉장고 대시보드** | 유통기한 순 정렬 목록, 전체/냉장실/냉동실 탭, 전체·임박(3일 이하)·만료 개수 통계 |
+|  **수정 · 스와이프 삭제** | 카드 탭 → 수정 BottomSheet, 좌우 스와이프로 삭제 (Supabase 즉시 반영) |
+|  **백그라운드 임박 알림** | WorkManager `CoroutineWorker`가 주기적으로 DB를 확인해 3일 이하 재료가 있으면 푸시 알림 |
+|  **유튜브 레시피 연결** | 재료별 D-Day 칩(임박 재료는 빨간색) → 탭하면 "OO 레시피" 유튜브 검색으로 이동 |
 
-## 🖼️ 스크린샷
+## 스크린샷
 
 | 홈 | 스캔 | 레시피 | 알림 |
 |:-:|:-:|:-:|:-:|
 | <img src="docs/screenshots/home.png" width="180"/> | <img src="docs/screenshots/scan.png" width="180"/> | <img src="docs/screenshots/recipe.png" width="180"/> | <img src="docs/screenshots/notification.png" width="180"/> |
 
-## 🏗️ 아키텍처
+## 아키텍처
 
 ```mermaid
 flowchart LR
@@ -78,7 +78,7 @@ app/src/main/java/com/example/freshguard/
 └── Ingredient.kt                # @Serializable 데이터 모델
 ```
 
-## 🛠️ 기술 스택
+## 기술 스택
 
 | 분류 | 기술 |
 |---|---|
@@ -88,7 +88,7 @@ app/src/main/java/com/example/freshguard/
 | Async / Background | Kotlin Coroutines, WorkManager (CoroutineWorker) |
 | UI | Material Components (BottomNavigation, TabLayout, BottomSheet, Chip), RecyclerView, SplashScreen API |
 
-## 🔧 트러블슈팅
+## 트러블슈팅
 
 <details>
 <summary><b>1. 탭 간 데이터 불일치 — 삭제한 재료가 다른 탭에 남아 있음</b></summary>
@@ -125,7 +125,7 @@ app/src/main/java/com/example/freshguard/
 - **해결**: 레시피를 생성하지 않고, 재료명으로 유튜브 검색을 바로 열어 실제로 검증된 레시피 영상에 연결
 </details>
 
-## 🚀 실행 방법
+## 실행 방법
 
 1. 저장소 클론 후 Android Studio로 열기
 2. `local.properties.example`을 참고해 프로젝트 루트의 `local.properties`에 Supabase 정보 추가
@@ -146,7 +146,7 @@ app/src/main/java/com/example/freshguard/
 
 APK는 [Releases](../../releases)에서 받을 수 있습니다.
 
-## 💭 회고
+## 회고
 
 웹 서비스를 네이티브 앱으로 옮기면서 화면 구현보다 **생명주기 · 백그라운드 작업 · 상태 동기화**가 더 어렵다는 것을 체감했습니다.
 특히 "AI가 만든 레시피"보다 "실제로 검증된 레시피로 연결"하는 쪽이 사용자에게 더 가치 있다는 판단으로 기능 방향을 바꾼 경험이 기억에 남습니다.
